@@ -1,10 +1,11 @@
 <footer class="container">
     <div class="row text-center">
         <address class="col-12">
-            {{ autor }}
+            {{ autor | titlecase}}
         </address>
         <p class="col-12">
-            {{ hoy.toLocaleDateString() }}
+            <!-- {{ hoy | date : 'fullDate' : null : 'es' | titlecase }} -->
+            {{ hoy | date : 'fullDate' | titlecase }}
         </p>
         
     </div>

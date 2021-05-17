@@ -3,9 +3,12 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'iny-home',
   template: `
-    <p>
-      home works!
-    </p>
+  <div class="container">
+    <div class="row">
+      <iny-saludo class="col-6"></iny-saludo>
+      <iny-saludo-ref class="col-6"></iny-saludo-ref>
+    </div>
+  </div>
   `,
   styles: [
   ]

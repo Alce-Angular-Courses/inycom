@@ -3,9 +3,11 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'iny-tareas',
   template: `
-    <p>
-      tareas works!
-    </p>
+    <div class="container">
+      <div class="row">
+        <iny-lista-simple class="col-6"></iny-lista-simple>  
+      </div>
+    </div>
   `,
   styles: [
   ]

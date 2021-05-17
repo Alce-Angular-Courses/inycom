@@ -10,7 +10,7 @@ export class FooterComponent implements OnInit {
   hoy: Date
 
   constructor() { 
-    this.autor = 'Alejandro Cerezo'
+    this.autor = 'alejandro cerezo'
     this.hoy = new Date()
   }
 
