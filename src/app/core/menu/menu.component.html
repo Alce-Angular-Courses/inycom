@@ -1,15 +1,8 @@
 <nav>
     <ul class="nav">
-        <li class="nav-item">
-            <a [routerLink]="'home'" routerLinkActive="active"  class="nav-link"><a>Home</a></a>
-        </li>
-        <li class="nav-item">
-            <a [routerLink]="'tareas'" routerLinkActive="active" class="nav-link">Tareas</a>
-        </li>
-        <li class="nav-item">
-            <a [routerLink]="'about'" routerLinkActive="active" class="nav-link">About</a>
+        <li  *ngFor="let item of menuItems" class="nav-item">
+            <a [routerLink]="item.path" routerLinkActive="active"  class="nav-link">{{item.nombre}}</a>
         </li>
     </ul>
 </nav>
-
 

@@ -1,9 +1,7 @@
-.lista {
-    margin-top: 1rem;
-}
-
-ul {
-    list-style: none;
+:host{
+    display: block;
+    border: 1px solid gray;
+    padding: 0.2rem;
 }
 
 .boton {
@@ -15,8 +13,6 @@ ul {
     font-style: italic;
 }
 
-li {
-    span {
-       padding: 0.5rem;; 
-    }
+span {
+    padding: 0.5rem;; 
 }
