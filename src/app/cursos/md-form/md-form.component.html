@@ -6,6 +6,14 @@
             <label for="nombre">Nombre</label>
             <input type="text" class="form-control" formControlName="nombre" id="nombre">
         </div>
+        <div class="error" [hidden]="fgAlumno.get('nombre').valid || fgAlumno.get('nombre').untouched">
+            <p *ngIf="fgAlumno.get('nombre').hasError('required')">
+                El campo nombre es obligatorio
+            </p>
+            <p *ngIf="fgAlumno.get('nombre').hasError('minlength')">
+                El nombre debe tener al menos 3 caracteres
+            </p>
+        </div>
         <div class="form-group">
             <label for="apellidos">Apellidos</label>
             <input type="text" class="form-control" formControlName="apellidos" id="apellidos">
@@ -16,8 +24,7 @@
             </div>  
         <div class="form-group">
             <label for="email">Correo</label>
-            <input type="email" class="form-control" formControlName="email" id="email"
-            required>
+            <input type="email" class="form-control" formControlName="email" id="email">
         </div>
         <div class="form-group">
             <label for="nacim">Fecha de nacimiento</label>
@@ -41,7 +48,7 @@
             <div *ngFor="let turno of turnos" class="form-check">
                 <label class="form-check-label" [title]="turno.info">
                     <input type="radio" class="form-check-input" name="turno" [id]="'turno-' + turno.id"
-                    [value]="turno" formControlName="turno" required>
+                    [value]="turno" formControlName="turno">
                     {{ turno.nombre}}
                 </label>
             </div>
@@ -62,7 +69,7 @@
         </div>  
         <div class="form-group" >
         <label for="curso">Selecciona el tema</label>
-            <select class="form-control" formControlName="curso" id="curso" required>
+            <select class="form-control" formControlName="curso" id="curso">
                 <option value=""></option>
                 <option *ngFor="let curso of cursos"
                     [title]="curso.info"

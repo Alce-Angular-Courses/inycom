@@ -18,7 +18,7 @@ export class MdFormComponent implements OnInit {
     this.cursos = CURSOS
     this.turnos = TURNOS
     this.fgAlumno = this.fb.group({
-      nombre: ['', [Validators.required, Validators.minLength(3)] ],
+      nombre: ['', [Validators.required, Validators.minLength(3)], ],
       apellidos: [''],
       dni: [''],
       email: [''],
