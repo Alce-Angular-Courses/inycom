@@ -9,7 +9,6 @@ import { ListaComponent } from './lista/lista.component';
 import { NuevaComponent } from './nueva/nueva.component';
 import { TareaComponent } from './tarea/tarea.component';
 
-
 @NgModule({
   declarations: [
     TareasComponent,
@@ -22,6 +21,7 @@ import { TareaComponent } from './tarea/tarea.component';
     CommonModule,
     FormsModule,
     TareasRoutingModule
-  ]
+  ],
+  providers: []
 })
 export class TareasModule { }
